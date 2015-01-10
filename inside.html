@@ -1,0 +1,651 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>IB Group Bakery</title>
+<style type="text/css">
+body {
+	padding: 0;
+	margin: 0;
+	background: #252525 url(img/background.jpg);
+	font-family: "Trebuchet MS";
+	font-size: 14px;
+	color: white;
+}
+
+h2 {
+	text-align: center;
+	font-style: italic;
+	font-size: 30px;
+	text-shadow: #353535 2px 3px 2px;
+	padding: 10px 0 0 0;
+	margin: 0
+}
+
+#toplighting {
+	background: url(img/toplighting.png) no-repeat;
+	width: 1150px;
+	min-height: 293px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#footerlighting {
+	background: url(img/footerlighting.png) repeat-x;
+	height: 376px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#header {
+	overflow: hidden;
+	padding: 40px 20px 30px 20px;
+}
+
+#logotype {
+	float: left;
+	margin-left: 20px;
+}
+
+#contentType {
+    font-size: 21px;
+    font-weight: bold;
+    background-color: black;
+    float: left;
+    padding: 2px 8px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+#content {
+    color: #2c2c2c;
+	position: relative;
+    background-color: #d5d5d5;
+
+    /*
+    -moz-box-shadow: 0 0 60px black;
+    -webkit-box-shadow: 0 0 60px black;
+    box-shadow: 0 0 60px black;
+    */
+}
+
+#content table {
+    border-collapse: collapse;
+}
+
+#content a {
+	text-decoration: none;
+}
+
+#container {
+    /*
+    -moz-box-shadow: inset 0 0 50px black;
+    -webkit-box-shadow: inset 0 0 50px black;
+    box-shadow: inset 0 0 50px black;
+    */
+}
+
+#body {
+    vertical-align: top;
+    padding: 20px;
+}
+
+#body p {
+    text-shadow: 1px 1px white;
+}
+
+#navigation {
+    width: 299px;
+    background: url(img/navigationBackground.png) repeat-y;
+    vertical-align: top;
+    padding: 0;
+    color: white;
+    position: relative;
+}
+
+#navigationList {
+    position: absolute;
+    top: 30px;
+    right: -33px;
+    left: -130px;
+}
+
+.navigationItem {
+    border-collapse: collapse;
+    height: 47px;
+    border: 0;
+    border-spacing: 0;
+    margin: 0 0 0 auto;
+}
+
+.navigationItem a {
+    white-space: nowrap;
+    font-size: 17px;
+    font-style: italic;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navigationItem-selected a {
+    color: black;
+    text-shadow: none;
+}
+
+.navigationItem td {
+    padding: 0;
+}
+
+.navigationItem .left {
+    background: url(img/navigationItem-left.png) no-repeat;
+}
+
+.navigationItem .left div {
+    width: 105px;
+}
+
+.navigationItem .center {
+    background: url(img/navigationItem-center.png) repeat-x;
+    min-width: 275px;
+    max-width: 284px;
+    overflow: hidden;
+    text-align: left;
+    color: white;
+}
+
+.navigationItem .right div {
+    width: 33px;
+}
+
+.navigationItem-selected .left {
+    background: url(img/selectedItem-left.png) no-repeat;
+}
+
+.navigationItem-selected .left div {
+    width: 105px;
+}
+
+.navigationItem-selected .center {
+    background: url(img/selectedItem-center.png) repeat-x;
+    text-align: right;
+    color: black;
+}
+
+.navigationItem-selected .right {
+    background: url(img/selectedItem-right.png) no-repeat;
+}
+
+.navigationItem-selected .right div {
+    width: 40px;
+}
+
+#navigationList .sublist {
+    margin: 0px 34px 0px 130px;
+}
+
+#navigationList .sublist li {
+    padding: 5px 15px;
+}
+
+#navigationList ul a {
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+    text-shadow: 1px 2px 1px #272727;
+}
+
+#navigationList ul li {
+    padding-left: 15px;
+}
+
+#navigationList ul ul li {
+    padding-left: 30px;
+}
+
+#navigationList,
+#navigationList ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#navigationList ul {
+    background: #828282 url(img/navigationInnerBackground.png) repeat;
+
+    -moz-box-shadow: inset 0 0 20px #262626;
+    -webkit-box-shadow: inset 0 0 20px #262626;
+    box-shadow: inset 0 0 20px #262626;
+}
+
+#navigationList ul li:hover {
+    background: url(img/navigationInnerSelection.png);
+}
+
+.heading {
+    height: 52px;
+    margin: 0 -20px 0 auto;
+    border-collapse: collpase;
+    border-spacing: 0;
+}
+
+.heading td {
+    padding: 0;
+    margin: 0;
+}
+
+.heading .left {
+    background: url(img/heading-left.png) no-repeat;
+}
+
+.heading .left div {
+    width: 86px;
+}
+
+.heading .center {
+    background: url(img/heading-center.png) repeat-x;
+}
+
+.heading .right {
+    background: url(img/heading-right.png) no-repeat;
+}
+
+.heading .right div {
+    width: 39px;
+}
+
+.heading h1 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-style: italic;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.specsContainer {
+
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+
+    -moz-box-shadow: 0 0 5px #7a7a7a;
+    -webkit-box-shadow: 0 0 5px #7a7a7a;
+    box-shadow: 0 0 5px #7a7a7a;
+}
+
+.specs th {
+    color: white;
+    background: #3a3a3a url(img/theadBackground.png) repeat-x bottom;
+    padding: 15px 3px;
+    border-left: 1px solid #3a3a3a;
+}
+
+.specs th.first {
+    -webkit-border-top-left-radius: 7px;
+    -moz-border-top-left-radius: 7px;
+    border-top-left-radius: 7px;
+    border-left: 0;
+
+}
+
+.specs th.last {
+    -webkit-border-top-right-radius: 7px;
+    -moz-border-top-right-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.specs th em {
+    font-weight: normal;
+    display: block;
+}
+
+.specs td {
+    text-align: center;
+    background-color: white;
+    padding: 5px 10px;
+
+
+    border-left: 1px solid #b5b5b5;
+    border-top: 1px solid #aaaaaa;
+}
+
+.specs .evenRow td {
+    background-color: #e1ebfb;
+}
+
+.specs td.first {
+    border-left: 0;
+}
+
+.specs td.model {
+    text-align: left;
+}
+
+.specs td.model em {
+    background-color: #004eff;
+    color: white;
+    font-style: normal;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+
+    border-radius: 3px;
+    border: 1px solid #004eff;
+}
+
+.specs tfoot td {
+    background-color: #3a3a3a;
+    height: 10px;
+
+    -webkit-border-bottom-left-radius: 7px;
+    -moz-border-bottom-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+
+    -webkit-border-bottom-right-radius: 7px;
+    -moz-border-bottom-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+
+    border: 0;
+    padding: 0;
+}
+
+#footer {
+
+}
+
+#menu {
+	background-color: black;
+	position: relative;
+}
+
+#menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 15px 0 30px 0;
+	overflow: hidden;
+}
+
+#menu li {
+	float: left;
+}
+
+#menu a {
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+}
+
+#menu a:link,
+#menu a:visited {
+	color: white;
+}
+
+#menu a:hover {
+	background-color: #8d8d8d;
+	color: black;
+}
+
+#menu .contacts {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#menu .contacts a {
+	background-color: #273861;
+}
+
+#menu .contacts a:hover {
+	background-color: #2e4782;
+	color: white;
+}
+</style>
+<script type='text/javascript' src='js/jquery-1.11.2.min.js'></script>
+</head>
+
+<body>
+	<div id="footerlighting"></div>
+		<div id="toplighting">
+			<div id="header">
+				<a href="index.html" id="logotype">
+					<img src="img/logotype.png" />
+				</a>
+                <div id="contentType">Bakery</div>
+			</div>
+            <div id="content">
+                <div id="container">
+            <table>
+                <tr>
+                    <td id="navigation">
+                        <div style="position: relative">
+                        <ul id="navigationList">
+                            <li>
+                                <table class="navigationItem navigationItem-selected">
+                                    <tr>
+                                        <td class="left">
+                                            <div />
+                                        </td>
+                                        <td class="center">
+                                            <a href="#">Отсадочные машины</a></td>
+                                        <td class="right">
+                                            <div />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <ul class="sublist">
+                                    <li>
+                                        <a href="#">Каталог фильер</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Образцы печенья</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <table class="navigationItem">
+                                    <tr>
+                                        <td class="left">
+                                            <div />
+                                        </td>
+                                        <td class="center">
+                                            <a href="#">Взбивальные машины</a></td>
+                                        <td class="right">
+                                            <div />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li>
+                                <table class="navigationItem">
+                                    <tr>
+                                        <td class="left">
+                                            <div />
+                                        </td>
+                                        <td class="center">
+                                            <a href="#">Печи</a></td>
+                                        <td class="right">
+                                            <div />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li>
+                                <table class="navigationItem">
+                                    <tr>
+                                        <td class="left">
+                                            <div />
+                                        </td>
+                                        <td class="center">
+                                            <a href="#">Упаковочное оборудование</a></td>
+                                        <td class="right">
+                                            <div />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                        </div>
+                    </td>
+                    <td id="body">
+                        <table class="heading">
+                            <tr>
+                                <td class="left">
+                                    <div />
+                                </td>
+                                <td class="center">
+                                    <h1>Отсадочные машины IB Group</h1>
+                                </td>
+                                <td class="right">
+                                    <div />
+                                </td>
+                            </tr>
+                        </table>
+                        <p>Автоматическая отсадочная машина для производства печенья и двухцветного печенья предназначена для отсадки жидких тест (например: бисквитное и песочное с большим содержанием жира) на листы или формы головка – тип I. Машина может быть оборудована валковым насосом, который используется для тест густых, тест с добавками и использоваться с резкой струной – тип II, III. Возможно изготовление комбинированной головки на 2 бункера для отсадки печенья с жировыми или фруктовыми начинками. Машина выполнена в 3 видах: для отсадки одного вида теста, для двух разных видов теста одновременно или для двух видов теста и резки струной.</p>
+                        <p>Пульт управления – цветная сенсорная панель 11 дюймов, меню на 4 языках. Микропроцессор и память применены в контролере Siemens, позволяют выполнять более 100 вариантов различных узоров. Установка и регулировка соответствующих параметров машины происходит автоматически. Программа позволяет создавать и сохранять рецепты и узоры оператору самостоятельно. Все точные привода выполнены на серводвигателях Delta (возможно замена на Omron), основные привода марки Норд. Все электрика Schneider. Машина выполнена с высокой точностью и качеством – что обеспечит длительную и безотказную работу.</p>
+                        <p>Оборудование может работать с частотой до 40 отсадок в минуту. Монтаж частей насоса, бункеров, механизма насадок и валковой группы очень легкий и его можно выполнить за несколько минут. Монтаж механизмов после мытья и чистки машины занимает тоже несколько минут.</p>
+                        <h3>Технические данные:</h3>
+                        <div class="specsContainer">
+                        <table class="specs">
+                            <thead>
+                                <tr>
+                                <th class="first">
+                                    <strong>Модель</strong>
+                                </th>
+                                <th>
+                                    <strong>Валковая группа</strong>
+                                </th>
+                                <th>
+                                    <strong>Размер протвиней</strong> <em>(мм)</em>
+                                </th>
+                                <th>
+                                    <strong>Мощность</strong> <em>[кВт]</em>
+                                </th>
+                                <th>
+                                    <strong>Масса</strong> <em>[кг]</em>
+                                </th>
+                                <th>
+                                    <strong>Емкость бачка</strong> <em>[L]</em>
+                                </th>
+                                <th class="last">
+                                    <strong>Количество</strong> <em>[ходов/мин.]</em>
+                                </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="model first">
+                                        <div><strong>IB Group Uno 600</strong></div>
+                                        <div><em class="type">Тип II, III</em></div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <img src="img/model1.png" />
+                                        <div>
+                                        <div>Одноцветное тесто</div>
+                                    </td>
+                                    <td>
+                                        <div>400-600</div>
+                                        <div>600-800</div>
+                                    </td>
+                                    <td>2.5 (360V)</td>
+                                    <td>450</td>
+                                    <td>40</td>
+                                    <td>20-40</td>
+                                </tr>
+                                <tr class="evenRow">
+                                    <td class="model first">
+                                        <div><strong>IB Group Uno 600</strong></div>
+                                        <div><em class="type">Тип I</em></div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <img src="img/model2.png" />
+                                        <div>
+                                        <div>Одноцветное тесто с включениями</div>
+                                    </td>
+                                    <td>
+                                        <div>400-600</div>
+                                        <div>600-800</div>
+                                    </td>
+                                    <td>2.5 (360V)</td>
+                                    <td>450</td>
+                                    <td>40</td>
+                                    <td>20-40</td>
+                                </tr>
+                                <tr>
+                                    <td class="model first">
+                                        <div><strong>IB Group Duo 600</strong></div>
+                                        <div><em class="type">Тип II, III</em></div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <img src="img/model3.png" />
+                                        <div>
+                                        <div>Двуцветное тесто</div>
+                                    </td>
+                                    <td>
+                                        <div>400-600</div>
+                                        <div>600-800</div>
+                                    </td>
+                                    <td>4.5 (360V)</td>
+                                    <td>650</td>
+                                    <td>2x40</td>
+                                    <td>20-40</td>
+                                </tr>
+                                <tr class="evenRow">
+                                    <td class="model first">
+                                        <div><strong>IB Group Uno 600</strong></div>
+                                        <div><em class="type">Тип I</em></div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <img src="img/model4.png" />
+                                        <div>
+                                        <div>Двуцветное тесто с включениями</div>
+                                    </td>
+                                    <td>
+                                        <div>400-600</div>
+                                        <div>600-800</div>
+                                    </td>
+                                    <td>2.5 (360V)</td>
+                                    <td>650</td>
+                                    <td>2x40</td>
+                                    <td>20-40</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <td colspan="7"></td>
+                            </tfoot>
+                        </table>
+                        </div>
+                        <p>Машины имеют общую станину (базу) для всех типов валковых механизмов, что позволяет на одной машине производить все типы одно и двухцветных печений и работать с любым типом теста и начинок.</p>
+                        <p>Компания IB Group поставляет полностью готовые к работе машины, проводит обучение технолога на действующем заводе, ОБЕСПЕЧИВАЕТ ГАРАНТИЮ НА МАШИНУ И УЗЛЫ НЕ МЕНЕЕ 18 МЕСЯЦЕВ.</p>
+                    </td>
+                </tr>
+            </table>
+                </div>
+            </div>
+			<div id="footer">
+				<div id="menu">
+					<ul>
+						<li>
+							<a href="#">Вакансии</a>
+						</li>
+						<li>
+							<a href="#">Карта сайта</a>
+						</li>
+						<li>
+							<a href="#">О компании</a>
+						</li>
+						<li class="contacts">
+							<a href="#">Контактная информация</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
